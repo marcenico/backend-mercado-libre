@@ -1,8 +1,8 @@
 var router = require('express').Router();
 var fetch = require("node-fetch");
 
-router.get('/:query', (req, res, next) => {
-  const query = req.params.query;
+router.get('', (req, res, next) => {
+  const query = req.query.q;
   fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
     .then(res => res.json())
     .then(function (data) {
