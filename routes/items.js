@@ -3,7 +3,7 @@ var fetch = require("node-fetch");
 
 router.get('', (req, res, next) => {
   const query = req.query.q;
-  fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
+  fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}&limit=4`)
     .then(res => res.json())
     .then(function (data) {
       res.status(200).send(data);
