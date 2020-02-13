@@ -32,7 +32,8 @@ module.exports.templateItems = {
       },
       picture: '{{thumbnail}}',
       condition: '{{condition}}',
-      free_shipping: '{{shipping.free_shipping}}'
+      free_shipping: '{{shipping.free_shipping}}',
+      address: '{{address.state_name}}'
     }
   ],
 };
