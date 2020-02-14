@@ -3,6 +3,7 @@
  * for set an array of categories
  */
 module.exports.setCategories = function (filters) {
+  if (!filters.length) return [];
   var categories = [];
   paths = filters[0].values[0].path_from_root;
   for (const path of paths) {
